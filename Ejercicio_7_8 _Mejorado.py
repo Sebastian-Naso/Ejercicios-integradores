@@ -267,7 +267,7 @@ class Cuenta_Joven(Cuenta):
         else:
             print("")
             print("NO está Habilitado para retirar dinero.")
-            print("")
+            print("\nEl programa ha finalizado!")
 
             pass
 

@@ -110,8 +110,8 @@ class Cuenta(ABC):
                     print("")
                     break
                 else:
-                    print("Debe ingresar una cantidad mayor a CERO.")
-                continue
+                    # print("Debe ingresar una cantidad mayor a CERO.")
+                    break
             except ValueError:
                 print("Debes ingresar un número (puede tener decimales)")
                 continue
@@ -328,10 +328,11 @@ class Cuenta_Joven(Cuenta):
                 self.cantidad  = float(input("Ingrese cantidad de dinero a retirar: "))
                 nueva_cuenta.saldo = nueva_cuenta.saldo - self.cantidad
                 print("{} {} ha retirado ${} y su saldo es ${:.2f}".format(nueva_cuenta.nombre, nueva_cuenta.apellido, self.cantidad, nueva_cuenta.saldo))
+                print("\nEl programa ha finalizado!")
         else:
             print("")
             print("NO está Habilitado para retirar dinero.")
-            print("")
+            print("\nEl programa ha finalizado!")
 
             pass
 
